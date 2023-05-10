@@ -83,6 +83,8 @@ def logout():
     session.clear()
     return redirect(url_for('index'))
 
+if __name__ == '__main__':
+    bp.run(debug=True,port=3389)
 
 def login_required(view):
     @functools.wraps(view)
